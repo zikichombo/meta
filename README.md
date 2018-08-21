@@ -8,7 +8,7 @@ projects can be placed here.
 
 All documentation here is subject to change at any time, as we are just starting.  Feel free
 to comment to help guide us.  Please do not rely on the documentation for planning 
-until this repository using semantic versioning, and it might not.
+until this repository is using semantic versioning, and it might not.
 
 # Semantic Versioning
 ZikiChombo uses semantic versioning for source code repositories intended for direct
@@ -38,6 +38,13 @@ If a zc module `A` depends on another zc module `B` in terms of imports, then
 `A` must not have a tag which is more reliable than `B` in terms of pre-release
 notation. Note that dependencies in terms of imports is not the same thing 
 as projected dependencies based on module roadmap.
+
+## Prerelease relation to major, minor, patch releases.
+Since pre-releases are characterised by the least reliable component,
+and it can be that the rest of the code needs patch release or minor
+version bumps, it is possible, even probable early on, that we will bump 
+minor and patch release versions without reaching a full release.
+
 
 
 # Synchronisation at heads
