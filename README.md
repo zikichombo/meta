@@ -39,20 +39,55 @@ If a zc module `A` depends on another zc module `B` in terms of imports, then
 notation. Note that dependencies in terms of imports is not the same thing 
 as projected dependencies based on module roadmap.
 
-## Prerelease relation to major, minor, patch releases.
+## Alpha/Beta stickiness and monotonicity
 Since pre-releases are characterised by the least reliable component,
 and it can be that the rest of the code needs patch release or minor
 version bumps, it is possible, even probable early on, that we will bump 
-minor and patch release versions without reaching a full release.
+minor and patch release versions without reaching a full release.  When
+this occurs we will enforce that no backwards motion occurs with respect
+to alpha-ness or beta-ness or rc-ness.  So we can have
 
+```
+    v0.1.2-alpha.W
+    v0.2.0-alpha.W
+```
+
+or 
+
+```
+    v0.1.2-alpha.W
+    v0.1.3-alpha.W
+```
+
+but not 
+
+```
+    v0.1.2-alpha.2
+    v0.1.3-alpha.1
+```
+
+and also not
+
+```
+    v0.1.2-beta.1
+    v0.1.3-alpha.1
+```
+
+Once pre-release tags disappear and there is a full release, this monotonicity 
+resets and we can go back to the state of low alpha quality and corresponding
+faster forward motion.
 
 
 # Synchronisation at heads
-From time to time, cross module commits may not be synchronised.  ZikiChombo
+From time to time, cross module master heads may not be synchronised.  ZikiChombo
 only releases each repository independently.  We estimate the versioning and
-evolution of the repositories will be very heterogenous and so brief 
-desynchonisation at heads will incur less maintenance overhead.  Go's module
-system will help enforce synchronisation between releases.
+evolution of the repositories will be very heterogenous and so (initially) brief 
+desynchonisation at heads will incur less maintenance overhead than putting 
+everything in one repository. Go's module system will help enforce synchronisation 
+between releases.  As Go's modules are currently [opt-in](https://tip.golang.org/cmd/go/#hdr-Modules__module_versions__and_more)
+(with go1.11 near release), and only default in the next major release, 
+we encourage developers to opt-in to go's modules when working with zc code.
+This may become a necessity in the very short term.
 
 
 
