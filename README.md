@@ -79,18 +79,15 @@ faster forward motion.
 
 
 # Synchronisation at heads
-From time to time, cross module master heads may not be synchronised.  ZikiChombo
-only releases each repository independently.  We estimate the versioning and
-evolution of the repositories will be very heterogenous and so (initially) brief 
-desynchonisation at heads will incur less maintenance overhead than putting 
-everything in one repository. Go's module system will help enforce synchronisation 
-between releases.  As Go's modules are currently [opt-in](https://tip.golang.org/cmd/go/#hdr-Modules__module_versions__and_more)
-(with go1.11 near release), and only default in the next major release, 
-we encourage developers to opt-in to go's modules when working with zc code.
-This may become a necessity in the very short term.
-
-
-
-
+From time to time, cross module master heads may not be synchronised.
+ZikiChombo only releases each repository independently.  We estimate the
+versioning and evolution of the repositories will be very heterogenous and so
+(initially) brief desynchonisation at heads will incur less maintenance
+overhead than putting everything in one repository. Go's module system will
+help enforce synchronisation between releases.  As Go's modules are currently
+[opt-in](https://golang.org/cmd/go/#hdr-Preliminary_module_support), and only
+default in the next major release, we encourage developers to opt-in to go's
+modules when working with zc code.  This may become a necessity in the very
+short term.
 
 
