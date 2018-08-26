@@ -78,7 +78,7 @@ resets and we can go back to the state of low alpha quality and corresponding
 faster forward motion.
 
 
-# Synchronisation at heads
+# Synchronisation at heads and go get.
 From time to time, cross module master heads may not be synchronised.
 ZikiChombo only releases each repository independently.  We estimate the
 versioning and evolution of the repositories will be very heterogenous and so
@@ -88,6 +88,34 @@ help enforce synchronisation between releases.  As Go's modules are currently
 [opt-in](https://golang.org/cmd/go/#hdr-Preliminary_module_support), and only
 default in the next major release, we encourage developers to opt-in to go's
 modules when working with zc code.  This may become a necessity in the very
-short term.
+short term.  Due to the very limited nature of go get support with modules
+we recommend
+
+1. Turning off modules and setting GOPATH for go get.
+1. If go get fails to build, run go get -d for download only
+1. After go get succeeds via one of the above, turn modules on
+while working with ZikiChombo modules. 
+
+For example, if you want to work with ZikiChombo code in an isolated
+environment under some directory D, then
+
+```
+cd D
+mkdir src
+GOPATH=`pwd` GO111MODULE=off go get -d zikichombo.org/P/...  # with P a project
+```
+
+should work to download the code in a dedicated workspace with root D.
+
+Then, set GO111MODULE=on to build, test, hack, etc in D.
+
+# build tags
+We use the build tag "listen" for tests which generate or capture audio,
+and for tests which generate files whose only use is listening.
+
+By default, listen is off and you have to turn it on for testing:
+```
+go test zikichombo.org/xyz/ -tags listen
+```
 
 
