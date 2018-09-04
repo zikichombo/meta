@@ -131,8 +131,9 @@ The idea is that for any collaborator that is interested in working with zikicho
 but may not want to move their project or import zc, zc and these collaborators can work here
 on the part of the code that imports both.
 
-As a result, Zikichombo makes no guarantees about licensing in ext beyond granting
-its standard license to all zc contributed code in ext.
+As a result, Zikichombo makes no guarantees about licensing in ext via 
+imports beyond granting its standard license to all zc contributed code in 
+ext.
 
 
 
