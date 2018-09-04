@@ -77,6 +77,10 @@ Once pre-release tags disappear and there is a full release, this monotonicity
 resets and we can go back to the state of low alpha quality and corresponding
 faster forward motion.
 
+## Preleases and ext
+the ext module has no prerelease notation to accomodate collaborations at 
+different stages of stability.  Use at your own risk.
+
 
 # Synchronisation at heads and go get.
 From time to time, cross module master heads may not be synchronised.
