@@ -10,6 +10,28 @@ All documentation here is subject to change at any time, as we are just starting
 to comment to help guide us.  Please do not rely on the documentation for planning 
 until this repository is using semantic versioning, and it might not.
 
+# Special Thanks
+ZikiChombo would like to thank especially the following Go sound/audio related projects
+(sorted alphabetically by common name).
+1. azul3d.org
+1. github.com/yobert/alsa
+1. github.com/rakyll/audio
+1. github.com/faiface/beep
+1. dasa.cc/snd
+1. github.com/mewkiz/flac
+1. github.com/go-audio
+1. github.com/hajimehoshi/go-mp3
+1. github.com/padster/go-sound
+1. https://bitbucket.org/bcmills/harmonolog
+1. github.com/hajimehoshi/go-mp3
+1. github.com/hajimehoshi/oto
+1. github.com/gordonklaus/portaudio
+1. github.com/nf/sigourney
+
+Please give them a star, try them out too. We're all working together and
+learning from each other.  Ideas to add to the list?  Give us a shout, we'd
+like to learn from as many projects as possible.
+
 # Semantic Versioning
 ZikiChombo uses semantic versioning for source code repositories intended for direct
 use.  Our pre-release notation is as follows, with W a positive integer.
