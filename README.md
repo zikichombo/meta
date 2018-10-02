@@ -22,8 +22,9 @@ ZikiChombo would like to thank especially the following Go sound/audio related p
 1. github.com/go-audio
 1. github.com/hajimehoshi/go-mp3
 1. github.com/padster/go-sound
-1. https://bitbucket.org/bcmills/harmonolog
+1. bitbucket.org/bcmills/harmonolog
 1. github.com/hajimehoshi/go-mp3
+1. github.com/jfreymuth/oggvorbis
 1. github.com/hajimehoshi/oto
 1. github.com/gordonklaus/portaudio
 1. github.com/nf/sigourney
